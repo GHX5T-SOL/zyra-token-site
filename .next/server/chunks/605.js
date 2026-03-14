@@ -1,1 +1,0 @@
-"use strict";exports.id=605,exports.ids=[605],exports.modules={9605:(e,t,r)=>{r.r(t),r.d(t,{default:()=>s});let s=(0,r(8570).createProxy)(String.raw`/Users/mx/zyra/zyra-token-site/components/AvatarScene.tsx#default`)}};
