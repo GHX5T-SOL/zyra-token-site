@@ -18,11 +18,13 @@ export async function POST(req: NextRequest) {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${OPENCLAW_TOKEN}`,
+          'x-openclaw-agent-id': 'main',
         },
         body: JSON.stringify({
-          model: 'default',
+          model: 'openclaw:main',
           messages: [{ role: 'user', content: message }],
           stream: false,
+          user: 'zyra-token-site',
         }),
       });
       if (!res.ok) {
