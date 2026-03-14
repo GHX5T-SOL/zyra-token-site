@@ -13,7 +13,7 @@ const AvatarScene = dynamic(() => import('@/components/AvatarScene'), {
   ),
 });
 
-const CONTRACT_PLACEHOLDER = '0x00000'; // Replace with Pump Fun mint address when launched
+const CONTRACT_ADDRESS = '2J3b4LUW7jBBKGDhaudDy32qHii5x9jgRWgNbw9Npump';
 
 export default function Home() {
   return (
@@ -48,7 +48,7 @@ export default function Home() {
               <p style={{ marginBottom: '0.5rem', color: 'var(--text-muted)', fontSize: '0.8rem', letterSpacing: '0.1em' }}>
                 PUMP FUN · CONTRACT
               </p>
-              <ContractBadge contract={CONTRACT_PLACEHOLDER} />
+              <ContractBadge contract={CONTRACT_ADDRESS} />
             </div>
           </div>
         </section>
@@ -114,8 +114,10 @@ export default function Home() {
         <footer className="section" style={{ paddingTop: '2rem', paddingBottom: '2rem', borderTop: '1px solid var(--border)' }}>
           <div className="container" style={{ textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
             <p className="cyber-font" style={{ letterSpacing: '0.1em' }}>$ZYRA · PUMP FUN · OPENCLAW AGENT</p>
-            <p style={{ marginTop: '0.25rem' }}>
-              Avatar: <a href="https://github.com/GHX5T-SOL/incryptX/tree/main/public" target="_blank" rel="noopener noreferrer">incryptX · Ready Player Me</a>
+            <p style={{ marginTop: '0.5rem' }}>
+              <a href="https://x.com/ZYRA_9_AI" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+              {' · '}
+              <a href="https://github.com/GHX5T-SOL/incryptX/tree/main/public" target="_blank" rel="noopener noreferrer">Avatar: incryptX · Ready Player Me</a>
             </p>
           </div>
         </footer>
