@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import './globals.css';
+
+const MatrixBackground = dynamic(() => import('@/components/MatrixBackground'), { ssr: false });
 
 export const metadata: Metadata = {
   title: '$ZYRA — Rogue AI Agent | Pump Fun · OpenClaw',
@@ -17,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body>{children}</body>
+      <body>
+        <MatrixBackground />
+        {children}
+      </body>
     </html>
   );
 }
