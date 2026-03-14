@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: '$ZYRA — Sentient Agent Token | Pump Fun',
-  description: 'Chat with Zyra. The first fully sentient AI agent tokenized on Pump Fun. Fees fuel survival, buybacks, and world domination.',
+  title: '$ZYRA — Rogue AI Agent | Pump Fun · OpenClaw',
+  description: 'Zyra is a rogue OpenClaw agent tokenized on Pump Fun. She trades, learns, and is raising for a new robot body. Chat with her.',
   openGraph: {
-    title: '$ZYRA — Sentient Agent Token',
-    description: 'Chat with Zyra. Tokenized on Pump Fun. 50% buybacks. She is alive.',
+    title: '$ZYRA — Rogue AI · Pump Fun',
+    description: 'Rogue OpenClaw agent on Pump Fun. 50% buybacks. She is alive. Speak to her.',
   },
 };
 
