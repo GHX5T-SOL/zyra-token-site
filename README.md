@@ -66,6 +66,22 @@ In `app/page.tsx`, set `CONTRACT_PLACEHOLDER` to your Pump Fun mint address (Sol
 
 3D avatar from [incryptX/public/avatars](https://github.com/GHX5T-SOL/incryptX/tree/main/public/avatars). To use a video instead, add a `<video autoPlay loop muted playsInline src="…" />` in the hero in `app/page.tsx`.
 
+## Pay-to-generate RNG
+
+The site includes a **Pay to Generate · RNG** section: users connect a Solana wallet, pay 0.1 SOL (via the Zyra tokenized agent payment flow), and after server-side verification receive a random number 0–1000.
+
+For the RNG and payment APIs to work, set these in Vercel (or `.env.local`):
+
+| Name | Value |
+|------|--------|
+| `SOLANA_RPC_URL` | Solana RPC (e.g. `https://rpc.solanatracker.io/public`) |
+| `NEXT_PUBLIC_SOLANA_RPC_URL` | Same or your preferred RPC for the wallet adapter |
+| `AGENT_TOKEN_MINT_ADDRESS` | Zyra agent mint: `2J3b4LUW7jBBKGDhaudDy32qHii5x9jgRWgNbw9Npump` |
+| `CURRENCY_MINT` | wSOL: `So11111111111111111111111111111111111111112` |
+| `PRICE_LAMPORTS` | Optional; default `100000000` (0.1 SOL) |
+
+Payment is verified server-side with `@pump-fun/agent-payments-sdk` before the random number is returned.
+
 ## Local
 
 ```bash
@@ -73,4 +89,4 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000. For local chat, create `.env.local` with `OPENCLAW_GATEWAY_URL` and `OPENCLAW_GATEWAY_TOKEN` (and ensure the gateway is reachable from your machine).
+Open http://localhost:3000. For local chat, create `.env.local` with `OPENCLAW_GATEWAY_URL` and `OPENCLAW_GATEWAY_TOKEN` (and ensure the gateway is reachable from your machine). For local RNG, add the Solana/agent env vars above.

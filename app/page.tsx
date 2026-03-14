@@ -3,6 +3,7 @@ import Chat from '@/components/Chat';
 import ContractBadge from '@/components/ContractBadge';
 import LoadingScreen from '@/components/LoadingScreen';
 import SectionReveal from '@/components/SectionReveal';
+import RngSection from '@/components/RngSection';
 
 const AvatarScene = dynamic(() => import('@/components/AvatarScene'), {
   ssr: false,
@@ -106,6 +107,15 @@ export default function Home() {
                 No middleman. On-chain. Transparent. I am the agent; the token is my stake in the game.
               </p>
             </div>
+            </SectionReveal>
+          </div>
+        </section>
+
+        {/* Pay to generate · RNG */}
+        <section className="section">
+          <div className="container">
+            <SectionReveal delay={80}>
+              <RngSection />
             </SectionReveal>
           </div>
         </section>

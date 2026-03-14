@@ -14,7 +14,13 @@
     "react-dom": "^18.2.0",
     "three": "^0.160.0",
     "@react-three/fiber": "^8.15.0",
-    "@react-three/drei": "^9.92.0"
+    "@react-three/drei": "^9.92.0",
+    "@pump-fun/agent-payments-sdk": "3.0.0",
+    "@solana/wallet-adapter-phantom": "^0.9.24",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-solflare": "^0.6.27",
+    "@solana/web3.js": "^1.98.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",

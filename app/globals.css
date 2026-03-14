@@ -412,6 +412,106 @@ body::after {
 .terminal-line .prompt { color: var(--accent); }
 .terminal-line .cmd { color: var(--cyan); }
 
+/* RNG section — pay to generate */
+.rng-section {
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.rng-card {
+  max-width: 480px;
+}
+
+.rng-wallet-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.rng-wallet-btn {
+  font-family: 'JetBrains Mono', monospace !important;
+  background: rgba(0, 20, 28, 0.95) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--accent) !important;
+  border-radius: 6px !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.rng-wallet-btn:hover {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 16px var(--glow) !important;
+}
+
+.rng-pay-btn {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.rng-pay-btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: var(--bg-deep);
+  box-shadow: 0 0 20px var(--glow);
+}
+
+.rng-pay-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.rng-error {
+  color: #f87171;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+.rng-status {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.rng-result {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: rgba(0, 25, 35, 0.6);
+  border: 1px solid var(--border-bright);
+  border-radius: 6px;
+  padding-left: 1rem;
+}
+
+.rng-result-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.rng-result-value {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 0 20px var(--glow);
+}
+
 /* Transitions */
 .fade-in {
   animation: fadeIn 0.8s ease forwards;

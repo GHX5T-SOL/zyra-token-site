@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import './globals.css';
+import WalletProvider from '@/components/WalletProvider';
 
 const MatrixBackground = dynamic(() => import('@/components/MatrixBackground'), { ssr: false });
 
@@ -21,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body>
-        <MatrixBackground />
-        {children}
+        <WalletProvider>
+          <MatrixBackground />
+          {children}
+        </WalletProvider>
       </body>
     </html>
   );
